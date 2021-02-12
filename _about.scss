@@ -1,0 +1,28 @@
+.aboutMe {
+  margin: 10% 20%;
+
+  .myName {
+    font-size: 1.3rem;
+  }
+
+  .primaryColor {
+    color: $primary-color;
+  }
+
+  p {
+    color: #999999;
+  }
+
+  .education {
+    color: black;
+  }
+
+  .Myimg {
+    text-align: center;
+
+    img {
+      height: auto;
+      width: 80%;
+    }
+  }
+}
