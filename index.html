@@ -8,7 +8,25 @@
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet"> 
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Lexend+Mega&family=Quicksand:wght@400;700&family=Work+Sans&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+  <script>
+    $(document).ready(function(){
+      var offTopElementString = "-" + $("#wrap").offset().top;
+       var offTopElementNumber = parseInt(offTopElementString);
+      $(".mastheadArrowContainer").on("click",function(){
+       $("#wrap").css("margin-top", offTopElementNumber);
+
+       $(".mastheadContents").fadeOut();
+      });
+
+      $(window).scroll(function(){ 
+        $('.mastheadContents').css("opacity", 1- $(window).scrollTop() / 500) 
+      }) 
+    })
+  </script>
 </head>
 <body>
   <!-- Hidden header -->
@@ -22,16 +40,8 @@
       </div>
     </div>
   </div>
-    <!-- <div class="masthead-contents" style="opacity:1;">
-      <div class="masthead-text">
-        <div class="logo">
-          <h1>SAE</h1>
-          <a href="#" class="seeMore">See more</a>
-        </div>
-      </div>
-    </div> -->
-  <!-- </div> -->
-  <!-- Main header -->
+<div id="wrap">
+    <!-- Main header -->
     <header>
       <div class="logo">
         <a href="index.html">SAE MIKADO</a>
@@ -56,7 +66,7 @@
               <a href="contact.html">Contact</a>
             </li>
             <li>
-              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.instagram.com/_524s/?hl=ja"><i class="fab fa-instagram"></i></a>
             </li>
             <li>
               <a href="#"><i class="fab fa-twitter"></i></a>
@@ -66,7 +76,8 @@
             </li>
           </ul>
         </nav>
-      </div>
+      <!-- </div> -->
+      </div>   
     </header>
     <!-- Main section -->
     <main>
@@ -142,15 +153,7 @@
           </div>
         </a>
       </div>
-
-
-      <!-- <figure class=”hover-parent”>
-        <img src="https://pro2-bar-s3-cdn-cf.myportfolio.com/f3784884e27ac7670733563b07e6fd6f/8b5cfb0f-e4b0-494d-ac03-6ab65530be96_rw_1920.jpg?h=2a97ee988b5ec570667afe07d2d07047" alt="">
-        <figcaption class=”hover-mask”>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        </figcaption>
-      </figure> -->
     </main>
-  <!-- </section> -->
+</div>
 </body>
 </html>
